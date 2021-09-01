@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 
@@ -33,27 +35,25 @@ class LoginPage extends StatelessWidget {
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        hintText: "Enter username",
-                        labelText: "Username",
-                      ),
+                          hintText: "Enter Username", labelText: "Username"),
                     ),
                     TextFormField(
                       obscureText: true,
                       decoration: InputDecoration(
-                        hintText: "Enter password",
-                        labelText: "Password",
-                      ),
+                          hintText: "Enter Password", labelText: "Password"),
                     ),
                     SizedBox(
                       height: 40.0,
                     ),
                     ElevatedButton(
                       child: Text("Login"),
-                      style: TextButton.styleFrom(minimumSize: Size(150, 40)),
+                      style: TextButton.styleFrom(
+                        minimumSize: Size(150, 40),
+                      ),
                       onPressed: () {
                         Navigator.pushNamed(context, MyRoutes.homeRoute);
                       },
-                    )
+                    ),
                   ],
                 ),
               )
